@@ -1,3 +1,30 @@
-.section {
-  background-color: red;
+
+main {
+  padding-inline: $padding-mobile;
+  max-width: 2050px;
+  margin: auto;
+  padding-block: $padding-desktop;
 }
+
+@media (min-width: 50em) {
+  body {
+    padding-inline: $padding-desktop;
+  }
+}
+
+.section {
+  &__title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: $blue;
+    margin-bottom: 3em;
+    padding-left: 40px;
+  }
+}
+
+
+
+
+
+

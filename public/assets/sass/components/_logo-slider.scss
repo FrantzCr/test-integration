@@ -1,0 +1,54 @@
+.logo-slider {
+   
+  $min-image-size: 50px;
+  $max-image-size: 100px;
+  
+  --image-size: #{$max-image-size};
+
+  padding: 20px;
+  overflow: hidden;
+  margin: 0 auto;	
+	position: relative;
+	display: flex;
+
+	// &:hover ul {
+	// 	animation-play-state: paused;
+	// }
+	
+	ul { 
+		display: flex;
+		position: relative;
+		animation: marquee 20s linear infinite;
+    justify-content: space-around;
+	}
+		
+	li {
+		display: flex;
+    align-items: center;
+    justify-content: center;
+		min-width: var(--image-size);
+		height: var(--image-size);
+		margin: 0 1vw;
+	}
+  
+  &:after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background: linear-gradient(to right, white, rgba(white, 0) 80px, rgba(white, 0) calc(100% - 80px), white);
+	}
+  
+  @media (max-width:900px) {
+    --image-size: #{$min-image-size};
+    --image-size: min(max(#{$min-image-size}, 10vw), #{$max-image-size});
+	}
+
+}
+
+@keyframes marquee {
+	0%   { transform: translateX(0%); }
+	100% { transform: translateX(-100%); }
+}

@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node-sass public/assets/sass/main.scss public/assets/styles/main.css",
-    "watch": "node-sass public/assets/sass/main.scss public/assets/styles/main.css -w"
+    "build:css": "node-sass public/assets/sass/main.scss public/assets/styles/main.css",
+    "watch:css": "node-sass public/assets/sass/main.scss public/assets/styles/main.css -w"
   },
   "author": "",
   "license": "ISC",
