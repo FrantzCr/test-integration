@@ -1,4 +1,7 @@
 # Test intégration
+## Staging
+- https://frantz-integration.netlify.app/
+
 ## Infos
 - Sass architecture inspiration from 7-1-pattern
 - Naming inspiration from BEM
